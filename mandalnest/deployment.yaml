@@ -1,7 +1,7 @@
 apiVersion: apps/v1
-kind: Deployment # Kubernetes resource kind we are creating
+kind: Deployment # This is for Deployment, has also another value like Service
 metadata:
-  labels:
+  labels: # labels value [app: spring-test-app] must be matched with matchLabels value
     app: spring-test-app
   name: spring-test-app
 spec:
