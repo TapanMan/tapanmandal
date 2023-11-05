@@ -18,6 +18,6 @@ public class Student {
     private String regNo;
     private String course;
 
-    // Complete this with creating a table in the DB and
+    // Complete this with creating a table in the DB in both Postgres SQL and Oracle and
     // Annotate the above columns 
 }
