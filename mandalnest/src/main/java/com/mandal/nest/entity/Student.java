@@ -13,9 +13,16 @@ import lombok.NoArgsConstructor;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "STUDENT_ID")
     private Long id;
+
+    @Column(name = "NAME")
     private String name;
+
+    @Column(name = "REGISTRATION_NUMBER")
     private String regNo;
+
+    @Column(name = "COURSE")
     private String course;
 
     // Complete this with creating a table in the DB in both Postgres SQL and Oracle and
