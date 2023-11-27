@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * This is used for Heterogeneous database, one is for PostgresSQL and
+ * Other DB used is Oracle
+ */
 @RestController
 public class StudentController {
 
