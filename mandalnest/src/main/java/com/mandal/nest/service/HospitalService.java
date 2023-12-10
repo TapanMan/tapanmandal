@@ -23,12 +23,10 @@ public class HospitalService {
     private HospitalRepository hospitalRepository;
 
     public List<Hospital> getAllHospitals() {
-        //List<Hospital> hospitalList= new ArrayList<>();
         return hospitalList;
     }
 
     public Optional<Hospital> getHospital(int id) {
-
         //return hospitalRepository.findOne(id);
         return hospitalRepository.findById(id);
     }
@@ -38,15 +36,7 @@ public class HospitalService {
     }
 
     public void updateHospital(Hospital hos) {
-//if(hospitalRepository.findById(hos.getId()).isPresent())
-//      {
-//  Hospital hospital=hospitalRepository.findById(hos.getId()).get();
-//  hospital.setName(hos.getName());
-//  hospital.setCity(hos.getCity());
-//  hospital.setRating(hos.getRating());
         hospitalRepository.save(hos);
-
-//      }
     }
 
     public void deleteHospital(Hospital hospital) {
