@@ -36,7 +36,7 @@ public class HospitalController {
 //URI location=ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(sevedUser.getId()).toUri();
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
+   @PutMapping("hospitals/")
     public ResponseEntity<String> updateHospital(@RequestBody Hospital hospital) {
         hospitalService.updateHospital(hospital);
         return ResponseEntity.ok("ok");
