@@ -35,8 +35,12 @@ public class HospitalService {
         hospitalRepository.save(hospital);
     }
 
-    public void updateHospital(Hospital hos) {
-        hospitalRepository.save(hos);
+    public void updateHospital(Hospital hospital) throws Exception {
+        Hospital updatedHospital= hospitalRepository.findById(hospital.getId()).orElseThrow(()->new Exception("Hospital Not Exist"+hospital.getId()));
+        updatedHospital.setName(hospital.getName());
+        updatedHospital.setCity(hospital.getCity());
+        updatedHospital.setRating(hospital.getRating());
+        hospitalRepository.save(updatedHospital);
     }
 
     public void deleteHospital(Hospital hospital) {

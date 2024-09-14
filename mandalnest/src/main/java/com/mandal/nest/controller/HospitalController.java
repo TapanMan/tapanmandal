@@ -37,7 +37,7 @@ public class HospitalController {
     }
 
     @PutMapping("hospitals/")
-    public ResponseEntity<String> updateHospital(@RequestBody Hospital hospital) {
+    public ResponseEntity<String> updateHospital(@RequestBody Hospital hospital) throws Exception {
         hospitalService.updateHospital(hospital);
         return ResponseEntity.ok("ok");
     }
